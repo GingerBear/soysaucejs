@@ -1,5 +1,5 @@
 (function(window, $, soysauce) {
-  var resizeEvent = ("onorientationchange" in window) ? "orientationchange" : "resize";
+  var resizeEvent = ("onorientationchange" in window) && !/android/i.test(navigator.userAgent) ? "orientationchange" : "resize";
 
   $(window).on(resizeEvent, function(e) {
     if (soysauce.vars.lastResizeID) {
