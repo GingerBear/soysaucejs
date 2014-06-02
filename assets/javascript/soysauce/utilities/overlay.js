@@ -98,7 +98,7 @@ soysauce.overlay = (function() {
     }
 
     if (this.startingOrientation !== soysauce.browser.getOrientation()) {
-      $(window).trigger(("onorientationchange" in window) ? "orientationchange" : "resize")
+      $(window).trigger(("onorientationchange" in window) && !/android/i.test(navigator.userAgent) ? "orientationchange" : "resize")
     }
   };
 
