@@ -850,10 +850,6 @@ soysauce.carousels = (function() {
       return;
     }
 
-    if (self.lockScroll) {
-      return;
-    }
-
     self.lockScroll = angle >= 60 && angle <= 120 && !self.swiping ? true : false;
 
     if (self.lockScroll) {
